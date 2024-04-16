@@ -146,3 +146,106 @@ class ClientForm:
         # Clear the entry boxes
         self.clear_boxes()
         print("Client added successfully.")
+
+
+class GuestForm:
+    """Class to represent a GUI form to enter guest details."""
+    def __init__(self):
+        self.root = tk.Tk()
+        self.root.geometry("300x300")
+        self.root.title("Guest Form")
+
+        self.name_label = tk.Label(self.root, text="Name:")
+        self.name_label.grid(column=0, row=0, sticky=tk.W, padx=5, pady=5)
+        self.name_entry = tk.Entry(self.root)
+        self.name_entry.grid(column=1, row=0, sticky=tk.E, padx=5, pady=5)
+
+        # Add more entry fields for other guest attributes
+
+        self.submit_button = tk.Button(self.root, text="Submit", command=self.submit)
+        self.submit_button.grid(column=1, row=4, sticky=tk.E, padx=5)
+        self.root.mainloop()
+
+    def clear_boxes(self):
+        """Clear the entry boxes."""
+        self.name_entry.delete(0, tk.END)
+        # Add similar lines for other entry fields
+
+    def submit(self):
+        """Create a Guest object with entered details."""
+        name = self.name_entry.get()
+        # Get other entered details
+        # Create a Guest object
+        guest = Guest(name=name)
+        # Add the guest to the system
+        # Clear the entry boxes
+        self.clear_boxes()
+        print("Guest added successfully.")
+
+class EventForm:
+    """Class to represent a GUI form to enter event details."""
+    def __init__(self):
+        self.root = tk.Tk()
+        self.root.geometry("300x300")
+        self.root.title("Event Form")
+
+        self.event_type_label = tk.Label(self.root, text="Event Type:")
+        self.event_type_label.grid(column=0, row=0, sticky=tk.W, padx=5, pady=5)
+        self.event_type_entry = tk.Entry(self.root)
+        self.event_type_entry.grid(column=1, row=0, sticky=tk.E, padx=5, pady=5)
+
+        # Add more entry fields for other event attributes
+
+        self.submit_button = tk.Button(self.root, text="Submit", command=self.submit)
+        self.submit_button.grid(column=1, row=4, sticky=tk.E, padx=5)
+        self.root.mainloop()
+
+    def clear_boxes(self):
+        """Clear the entry boxes."""
+        self.event_type_entry.delete(0, tk.END)
+        # Add similar lines for other entry fields
+
+    def submit(self):
+        """Create an Event object with entered details."""
+        event_type = self.event_type_entry.get()
+        # Get other entered details
+        # Create an Event object
+        event = Event(event_type=event_type)
+        # Add the event to the system
+        # Clear the entry boxes
+        self.clear_boxes()
+        print("Event added successfully.")
+
+class SupplierForm:
+    """Class to represent a GUI form to enter supplier details."""
+    def __init__(self):
+        self.root = tk.Tk()
+        self.root.geometry("300x300")
+        self.root.title("Supplier Form")
+
+        self.name_label = tk.Label(self.root, text="Name:")
+        self.name_label.grid(column=0, row=0, sticky=tk.W, padx=5, pady=5)
+        self.name_entry = tk.Entry(self.root)
+        self.name_entry.grid(column=1, row=0, sticky=tk.E, padx=5, pady=5)
+
+        # Add more entry fields for other supplier attributes
+
+        self.submit_button = tk.Button(self.root, text="Submit", command=self.submit)
+        self.submit_button.grid(column=1, row=4, sticky=tk.E, padx=5)
+        self.root.mainloop()
+
+    def clear_boxes(self):
+        """Clear the entry boxes."""
+        self.name_entry.delete(0, tk.END)
+        # Add similar lines for other entry fields
+
+    def submit(self):
+        """Create a Supplier object with entered details."""
+        name = self.name_entry.get()
+        # Get other entered details
+        # Create a Supplier object
+        supplier = Supplier(name=name)
+        # Add the supplier to the system
+        # Clear the entry boxes
+        self.clear_boxes()
+        print("Supplier added successfully.")
