@@ -67,3 +67,82 @@ class EmployeeForm:
         self.clear_boxes()
         print("Employee added successfully.")
 
+
+
+class Client(Person):
+    """Class to represent a client."""
+    def __init__(self, name="", address="", contact_details="", client_id=0, budget=0.0):
+        super().__init__(name, address, contact_details)
+        self.client_id = client_id
+        self.budget = budget
+
+class Guest(Person):
+    """Class to represent a guest."""
+    def __init__(self, name="", address="", contact_details="", guest_id=0, event_id=0):
+        super().__init__(name, address, contact_details)
+        self.guest_id = guest_id
+        self.event_id = event_id
+
+class Event:
+    """Class to represent an event."""
+    def __init__(self, event_id=0, event_type="", theme="", date="", time="", duration="", venue_address="", client_id=0, guest_list=[], catering_company="", cleaning_company="", decorations_company="", entertainment_company="", furniture_company="", invoice=""):
+        self.event_id = event_id
+        self.event_type = event_type
+        self.theme = theme
+        self.date = date
+        self.time = time
+        self.duration = duration
+        self.venue_address = venue_address
+        self.client_id = client_id
+        self.guest_list = guest_list
+        self.catering_company = catering_company
+        self.cleaning_company = cleaning_company
+        self.decorations_company = decorations_company
+        self.entertainment_company = entertainment_company
+        self.furniture_company = furniture_company
+        self.invoice = invoice
+
+class Supplier:
+    """Class to represent a supplier."""
+    def __init__(self, supplier_id=0, name="", address="", contact_details="", menu="", min_guests=0, max_guests=0):
+        self.supplier_id = supplier_id
+        self.name = name
+        self.address = address
+        self.contact_details = contact_details
+        self.menu = menu
+        self.min_guests = min_guests
+        self.max_guests = max_guests
+
+class ClientForm:
+    """Class to represent a GUI form to enter client details."""
+    def __init__(self):
+        self.root = tk.Tk()
+        self.root.geometry("300x300")
+        self.root.title("Client Form")
+
+        self.name_label = tk.Label(self.root, text="Name:")
+        self.name_label.grid(column=0, row=0, sticky=tk.W, padx=5, pady=5)
+        self.name_entry = tk.Entry(self.root)
+        self.name_entry.grid(column=1, row=0, sticky=tk.E, padx=5, pady=5)
+
+        # Add more entry fields for other client attributes
+
+        self.submit_button = tk.Button(self.root, text="Submit", command=self.submit)
+        self.submit_button.grid(column=1, row=4, sticky=tk.E, padx=5)
+        self.root.mainloop()
+
+    def clear_boxes(self):
+        """Clear the entry boxes."""
+        self.name_entry.delete(0, tk.END)
+        # Add similar lines for other entry fields
+
+    def submit(self):
+        """Create a Client object with entered details."""
+        name = self.name_entry.get()
+        # Get other entered details
+        # Create a Client object
+        client = Client(name=name)
+        # Add the client to the system
+        # Clear the entry boxes
+        self.clear_boxes()
+        print("Client added successfully.")
