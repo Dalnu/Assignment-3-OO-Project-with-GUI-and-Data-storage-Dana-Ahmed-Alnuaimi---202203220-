@@ -171,6 +171,10 @@ class App:
 
         self.tabControl = ttk.Notebook(self.root)
 
+        # Create tabs
+        self.employee_tab = ttk.Frame(self.tabControl)
+        self.tabControl.add(self.employee_tab, text='Employees')
+        self.tabControl.pack(expand=1, fill='both')
 
 
 
