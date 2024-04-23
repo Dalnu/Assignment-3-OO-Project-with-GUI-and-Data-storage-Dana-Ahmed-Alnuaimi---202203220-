@@ -162,6 +162,14 @@ class EmployeeGUI:
         print("Employee added successfully. Employee ID:", employee_id)
 
 
+class App:
+    """Main application class"""
+    def __init__(self):
+        self.root = tk.Tk()
+        self.root.geometry("400x300")
+        self.root.title("Event Management System")
+
+        self.tabControl = ttk.Notebook(self.root)
 
 
 
