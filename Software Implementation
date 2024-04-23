@@ -177,6 +177,23 @@ class App:
         self.tabControl.pack(expand=1, fill='both')
 
 
+        # Create GUI for managing employees
+        self.employee_gui = EmployeeGUI(self.employee_tab)
+
+        self.root.mainloop()
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
