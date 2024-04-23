@@ -183,6 +183,9 @@ class App:
         self.root.mainloop()
 
 
+# Create dictionary to store employee details
+all_employees = {}
+
 
 
 
