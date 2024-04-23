@@ -97,6 +97,38 @@ class EmployeeGUI:
         self.employee_id_entry = tk.Entry(self.root)
         self.employee_id_entry.grid(column=1, row=1, sticky=tk.E, padx=5, pady=5)
 
+        self.department_label = tk.Label(self.root, text="Department:")
+        self.department_label.grid(column=0, row=2, sticky=tk.W, padx=5, pady=5)
+        self.department_entry = tk.Entry(self.root)
+        self.department_entry.grid(column=1, row=2, sticky=tk.E, padx=5, pady=5)
+
+        self.job_title_label = tk.Label(self.root, text="Job Title:")
+        self.job_title_label.grid(column=0, row=3, sticky=tk.W, padx=5, pady=5)
+        self.job_title_entry = tk.Entry(self.root)
+        self.job_title_entry.grid(column=1, row=3, sticky=tk.E, padx=5, pady=5)
+
+        self.basic_salary_label = tk.Label(self.root, text="Basic Salary:")
+        self.basic_salary_label.grid(column=0, row=4, sticky=tk.W, padx=5, pady=5)
+        self.basic_salary_entry = tk.Entry(self.root)
+        self.basic_salary_entry.grid(column=1, row=4, sticky=tk.E, padx=5, pady=5)
+
+        self.age_label = tk.Label(self.root, text="Age:")
+        self.age_label.grid(column=0, row=5, sticky=tk.W, padx=5, pady=5)
+        self.age_entry = tk.Entry(self.root)
+        self.age_entry.grid(column=1, row=5, sticky=tk.E, padx=5, pady=5)
+
+        self.dob_label = tk.Label(self.root, text="Date of Birth:")
+        self.dob_label.grid(column=0, row=6, sticky=tk.W, padx=5, pady=5)
+        self.dob_entry = tk.Entry(self.root)
+        self.dob_entry.grid(column=1, row=6, sticky=tk.E, padx=5, pady=5)
+
+        self.passport_details_label = tk.Label(self.root, text="Passport Details:")
+        self.passport_details_label.grid(column=0, row=7, sticky=tk.W, padx=5, pady=5)
+        self.passport_details_entry = tk.Entry(self.root)
+        self.passport_details_entry.grid(column=1, row=7, sticky=tk.E, padx=5, pady=5)
+
+        self.submit_button = tk.Button(self.root, text="Submit", command=self.submit)
+        self.submit_button.grid(column=1, row=8, sticky=tk.E, padx=5)
 
 
 
