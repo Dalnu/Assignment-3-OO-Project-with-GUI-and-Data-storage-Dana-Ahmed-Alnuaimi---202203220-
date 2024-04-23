@@ -186,9 +186,8 @@ class App:
 # Create dictionary to store employee details
 all_employees = {}
 
-
-
-
+# Run the application
+app = App()
 
 
 
