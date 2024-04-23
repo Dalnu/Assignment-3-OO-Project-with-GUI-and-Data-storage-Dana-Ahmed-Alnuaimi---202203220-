@@ -157,6 +157,10 @@ class EmployeeGUI:
         employee = Employee(name, employee_id, department, job_title, basic_salary, age, dob, passport_details)
         all_employees[employee_id] = employee
 
+        # Clear entry boxes after submission
+        self.clear_boxes()
+        print("Employee added successfully. Employee ID:", employee_id)
+
 
 
 
