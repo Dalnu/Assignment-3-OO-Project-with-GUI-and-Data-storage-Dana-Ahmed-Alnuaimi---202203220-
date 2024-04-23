@@ -132,6 +132,17 @@ class EmployeeGUI:
 
 
 
+    def clear_boxes(self):
+        """Clear all entry boxes"""
+        self.name_entry.delete(0, tk.END)
+        self.employee_id_entry.delete(0, tk.END)
+        self.department_entry.delete(0, tk.END)
+        self.job_title_entry.delete(0, tk.END)
+        self.basic_salary_entry.delete(0, tk.END)
+        self.age_entry.delete(0, tk.END)
+        self.dob_entry.delete(0, tk.END)
+        self.passport_details_entry.delete(0, tk.END)
+
 
 
 
