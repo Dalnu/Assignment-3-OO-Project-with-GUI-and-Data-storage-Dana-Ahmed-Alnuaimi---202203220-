@@ -154,6 +154,8 @@ class EmployeeGUI:
         dob = self.dob_entry.get()
         passport_details = self.passport_details_entry.get()
 
+        employee = Employee(name, employee_id, department, job_title, basic_salary, age, dob, passport_details)
+        all_employees[employee_id] = employee
 
 
 
