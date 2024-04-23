@@ -36,6 +36,19 @@ class Event:
         self.invoice = invoice
 
 
+class Client:
+    """Class to represent a client"""
+    def __init__(self, client_id="", name="", address="", contact_details="", budget=0):
+        self.client_id = client_id
+        self.name = name
+        self.address = address
+        self.contact_details = contact_details
+        self.budget = budget
+
+
+
+
+
 
 class SalesManager(Employee):
     """Class to represent a sales manager."""
