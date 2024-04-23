@@ -80,6 +80,23 @@ class DataHandler:
         return data
 
 
+class EmployeeGUI:
+    """Class to handle GUI operations related to employees"""
+    def __init__(self, root):
+        self.root = root
+        self.root.geometry("300x200")
+        self.root.title("Employee Details")
+
+        self.name_label = tk.Label(self.root, text="Name:")
+        self.name_label.grid(column=0, row=0, sticky=tk.W, padx=5, pady=5)
+        self.name_entry = tk.Entry(self.root)
+        self.name_entry.grid(column=1, row=0, sticky=tk.E, padx=5, pady=5)
+
+        self.employee_id_label = tk.Label(self.root, text="Employee ID:")
+        self.employee_id_label.grid(column=0, row=1, sticky=tk.W, padx=5, pady=5)
+        self.employee_id_entry = tk.Entry(self.root)
+        self.employee_id_entry.grid(column=1, row=1, sticky=tk.E, padx=5, pady=5)
+
 
 
 
