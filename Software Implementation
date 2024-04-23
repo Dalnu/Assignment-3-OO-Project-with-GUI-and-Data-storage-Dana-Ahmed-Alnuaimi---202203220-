@@ -65,7 +65,12 @@ class Supplier:
         self.min_guests = min_guests
         self.max_guests = max_guests
 
-
+class DataHandler:
+    """Class to handle reading and writing to data files using Pickle"""
+    @staticmethod
+    def write_to_file(data, filename):
+        with open(filename, 'wb') as f:
+            pickle.dump(data, f)
 
 
 
