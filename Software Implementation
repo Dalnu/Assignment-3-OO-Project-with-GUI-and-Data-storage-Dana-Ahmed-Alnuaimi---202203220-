@@ -143,6 +143,16 @@ class EmployeeGUI:
         self.dob_entry.delete(0, tk.END)
         self.passport_details_entry.delete(0, tk.END)
 
+    def submit(self):
+        """Get values from entry boxes and create Employee object"""
+        name = self.name_entry.get()
+        employee_id = self.employee_id_entry.get()
+        department = self.department_entry.get()
+        job_title = self.job_title_entry.get()
+        basic_salary = float(self.basic_salary_entry.get())
+        age = int(self.age_entry.get())
+        dob = self.dob_entry.get()
+        passport_details = self.passport_details_entry.get()
 
 
 
