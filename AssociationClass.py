@@ -1,11 +1,16 @@
+# Importing necessary classes from 'InheritanceClass' module
 from InheritanceClass import *
+# Importing necessary classes from 'CompositionClass' module
 from CompositionClass import *
 
+# Define a class named 'Event' representing an event organized by the company.
 class Event:
     """Represents an event organized by the company."""
 
+    # Constructor to initialize an Event object with the given attributes.
     def __init__(self, eventID, type, theme, date, time, duration, venueAddress, clientID, cateringCompany, cleaningCompany, decorationsCompany, entertainmentCompany, furnitureSupplyCompany, invoice):
         """Initialize an Event object with the given attributes."""
+        # Initializing instance variables with provided values
         self._eventID = eventID
         self._type = type
         self._theme = theme
@@ -14,7 +19,7 @@ class Event:
         self._duration = duration
         self._venueAddress = venueAddress
         self._clientID = clientID
-        self._guestList = []
+        self._guestList = []  # Initializing an empty list for guest list
         self._cateringCompany = cateringCompany
         self._cleaningCompany = cleaningCompany
         self._decorationsCompany = decorationsCompany
@@ -22,7 +27,7 @@ class Event:
         self._furnitureSupplyCompany = furnitureSupplyCompany
         self._invoice = invoice
 
-    # Getters
+    # Getter methods to retrieve attributes of the Event
     def getEventID(self):
         """Return the ID of the event."""
         return self._eventID
@@ -83,7 +88,7 @@ class Event:
         """Return the invoice for the event."""
         return self._invoice
 
-    # Setters
+    # Setter methods to modify attributes of the Event
     def setEventID(self, eventID):
         """Set the ID of the event."""
         self._eventID = eventID
@@ -144,18 +149,21 @@ class Event:
         """Set the invoice for the event."""
         self._invoice = invoice
 
+# Define a class named 'Client' representing a client of the company, inheriting from 'Person'.
 class Client(Person):
     """Represents a client of the company."""
 
+    # Constructor to initialize a Client object with the given attributes.
     def __init__(self, clientID, name, address, contactDetails, budget):
         """Initialize a Client object with the given attributes."""
+        # Initializing instance variables with provided values
         self._clientID = clientID
         self._name = name
         self._address = address
         self._contactDetails = contactDetails
         self._budget = budget
 
-    # Getters
+    # Getter methods to retrieve attributes of the Client
     def getClientID(self):
         """Return the client ID."""
         return self._clientID
@@ -176,7 +184,7 @@ class Client(Person):
         """Return the budget of the client."""
         return self._budget
 
-    # Setters
+    # Setter methods to modify attributes of the Client
     def setClientID(self, clientID):
         """Set the client ID."""
         self._clientID = clientID
