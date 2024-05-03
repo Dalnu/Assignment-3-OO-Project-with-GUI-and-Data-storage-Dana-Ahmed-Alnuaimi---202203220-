@@ -784,6 +784,87 @@ class ModifyDataWindow(tk.Tk):
             except FileNotFoundError:
                 messagebox.showerror("Error", "Employee data file not found")
 
+        if self.category == "Event":
+            try:
+                with open('eve.dat', 'rb') as inputfile:
+                    event_dict = pickle.load(inputfile)
+                    if data_id in event_dict:
+                        # Retrieve the event object
+                        event = event_dict[data_id]
+                        # Destroy current window
+                        self.destroy()
+                        # Create a new window for modifying event data
+                        ModifyDataWindow(self.master, event)
+                    else:
+                        messagebox.showerror("Error", "Event not found")
+            except FileNotFoundError:
+                messagebox.showerror("Error", "Event data file not found")
+
+        if self.category == "Client":
+            try:
+                with open('cli.dat', 'rb') as inputfile:
+                    client_dict = pickle.load(inputfile)
+                    if data_id in client_dict:
+                        # Retrieve the client object
+                        client = client_dict[data_id]
+                        # Destroy current window
+                        self.destroy()
+                        # Create a new window for modifying client data
+                        ModifyDataWindow(self.master, client)
+                    else:
+                        messagebox.showerror("Error", "Client not found")
+            except FileNotFoundError:
+                messagebox.showerror("Error", "Client data file not found")
+
+        if self.category == "Guest":
+            try:
+                with open('gus.dat', 'rb') as inputfile:
+                    guest_dict = pickle.load(inputfile)
+                    if data_id in guest_dict:
+                        # Retrieve the guest object
+                        guest = client_dict[data_id]
+                        # Destroy current window
+                        self.destroy()
+                        # Create a new window for modifying guest data
+                        ModifyDataWindow(self.master, guest)
+                    else:
+                        messagebox.showerror("Error", "Guest not found")
+            except FileNotFoundError:
+                messagebox.showerror("Error", "Guest data file not found")
+
+        if self.category == "Venue":
+            try:
+                with open('ven.dat', 'rb') as inputfile:
+                    venue_dict = pickle.load(inputfile)
+                    if data_id in venue_dict:
+                        # Retrieve the venue object
+                        venue = venue_dict[data_id]
+                        # Destroy current window
+                        self.destroy()
+                        # Create a new window for modifying venue data
+                        ModifyDataWindow(self.master, venue)
+                    else:
+                        messagebox.showerror("Error", "Venue not found")
+            except FileNotFoundError:
+                messagebox.showerror("Error", "Venue data file not found")
+
+        if self.category == "Supplier":
+            try:
+                with open('sup.dat', 'rb') as inputfile:
+                    supplier_dict = pickle.load(inputfile)
+                    if data_id in supplier_dict:
+                        # Retrieve the supplier object
+                        supplier = supplier_dict[data_id]
+                        # Destroy current window
+                        self.destroy()
+                        # Create a new window for modifying supplier data
+                        ModifyDataWindow(self.master, supplier)
+                    else:
+                        messagebox.showerror("Error", "Supplier not found")
+            except FileNotFoundError:
+                messagebox.showerror("Error", "Supplier data file not found")
+
+
     def go_back(self):
         self.destroy()
         self.master.deiconify()
