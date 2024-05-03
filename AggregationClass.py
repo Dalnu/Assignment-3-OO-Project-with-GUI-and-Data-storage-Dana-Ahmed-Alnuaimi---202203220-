@@ -1,61 +1,54 @@
 from InheritanceClass import *
 # Importing required classes or modules. 
 
-class Client(Person):
-# Defines a class `Client` inheriting from the `Person` class.
+class Guest(Person):
+    """Represents a guest attending an event."""
+    def __init__(self, guestID, guestName, guestContact, guestEmail, guestAddress):
+        """Initialize a Guest object with the given attributes."""
+        # Initialize attributes
+        self._guestID = guestID
+        self._guestName = guestName
+        self._guestContact = guestContact
+        self._guestEmail = guestEmail
+        self._guestAddress = guestAddress
 
-    """Represents a client of the company."""
-    # Docstring describing the purpose of the `Client` class.
+    # Getter and setter methods for each attribute
 
-    def __init__(self, clientID, name, address, contactDetails, budget):
-        """Initialize a Client object with the given attributes."""
-        # Constructor method to initialize a `Client` object with specific attributes.
+    def setGuestID(self, guestID):
+        """Set the guest ID."""
+        self._guestID = guestID
+    def getGuestID(self):
+        """Return the guest ID."""
+        return self._guestID
 
-    # Getters
-    # Methods to get the values of attributes.
+    def setGuestName(self, guestName):
+        """Set the name of the guest."""
+        self._name = guestName
+    def getGuestName(self):
+        """Return the name of the guest name."""
+        return self._guestName
 
-    def getClientID(self):
-        """Return the client ID."""
-        # Method to return the client ID.
+    def setGuestContact(self, guestContact):
+        """Set the name of the guest contact number."""
+        self._guestContact = guestContact
+    def getGuestContact(self):
+        """Return the name of the guest contact number."""
+        return self._guestContact
 
-    def getName(self):
-        """Return the name of the client."""
-        # Method to return the name of the client.
+    def setGuestEmail(self, guestEmail):
+        """Set the address of the guest email."""
+        self._guestEmail = guestEmail
+    def getGuestEmail(self):
+        """Return the address of the guest email."""
+        return self._guestEmail
 
-    def getAddress(self):
-        """Return the address of the client."""
-        # Method to return the address of the client.
+    def setGuestAddress(self, guestAddress):
+        """Set the contact details of the guest address."""
+        self._guestAddress = guestAddress
+    def getGuestAddress(self):
+        """Return the contact details of the guest address."""
+        return self._guestAddress
 
-    def getContactDetails(self):
-        """Return the contact details of the client."""
-        # Method to return the contact details of the client.
-
-    def getBudget(self):
-        """Return the budget of the client."""
-        # Method to return the budget of the client.
-
-    # Setters
-    # Methods to set the values of attributes.
-
-    def setClientID(self, clientID):
-        """Set the client ID."""
-        # Method to set the client ID.
-
-    def setName(self, name):
-        """Set the name of the client."""
-        # Method to set the name of the client.
-
-    def setAddress(self, address):
-        """Set the address of the client."""
-        # Method to set the address of the client.
-
-    def setContactDetails(self, contactDetails):
-        """Set the contact details of the client."""
-        # Method to set the contact details of the client.
-
-    def setBudget(self, budget):
-        """Set the budget of the client."""
-        # Method to set the budget of the client.
 
 class Event:
 # Defines a class `Event`.
@@ -192,3 +185,110 @@ class Event:
     def setInvoice(self, invoice):
         """Set the invoice for the event."""
         # Method to set the invoice for the event.
+
+
+class Supplier(Person):
+    """Represents a supplier providing services or goods for events."""
+    def __init__(self, supplierID, name, address, contactDetails):
+        """Initialize a Supplier object with the given attributes."""
+        # Initialize attributes
+        self._supplierID = supplierID
+        self._name = name
+        self._address = address
+        self._contactDetails = contactDetails
+
+    # Getter and setter methods for each attribute
+
+    def setSupplierID(self, supplierID):
+        """Set the supplier ID."""
+        self._supplierID = supplierID
+    def getSupplierID(self):
+        """Return the supplier ID."""
+        return self._supplierID
+
+    def setName(self, name):
+        """Set the name of the supplier."""
+        self._name = name
+    def getName(self):
+        """Return the name of the supplier."""
+        return self._name
+
+    def setAddress(self, address):
+        """Set the address of the supplier."""
+        self._address = address
+    def getAddress(self):
+        """Return the address of the supplier."""
+        return self._address
+
+    def setContactDetails(self, contactDetails):
+        """Set the contact details of the supplier."""
+        self._contactDetails = contactDetails
+    def getContactDetails(self):
+        """Return the contact details of the supplier."""
+        return self._contactDetails
+
+
+class Venue:
+    """Represents a venue where events are hosted."""
+    
+    def __init__(self, venueID, name, address, contact, minGuests, maxGuests):
+        """Initialize a Venue object with the given attributes."""
+        # Initialize attributes
+        self._venueID = venueID
+        self._name = name
+        self._address = address
+        self._contact = contact
+        self._minGuests = minGuests
+        self._maxGuests = maxGuests
+
+    # Getters
+    # Define getter methods for each attribute
+    def getVenueID(self):
+        """Return the venue ID."""
+        return self._venueID
+
+    def getName(self):
+        """Return the name of the venue."""
+        return self._name
+
+    def getAddress(self):
+        """Return the address of the venue."""
+        return self._address
+
+    def getContact(self):
+        """Return the contact details of the venue."""
+        return self._contact
+
+    def getMinGuests(self):
+        """Return the minimum number of guests allowed at the venue."""
+        return self._minGuests
+
+    def getMaxGuests(self):
+        """Return the maximum number of guests allowed at the venue."""
+        return self._maxGuests
+
+    # Setters
+    # Define setter methods for each attribute
+        def setVenueID(self, venueID):
+        """Set the venue ID."""
+        self._venueID = venueID
+
+    def setName(self, name):
+        """Set the name of the venue."""
+        self._name = name
+
+    def setAddress(self, address):
+        """Set the address of the venue."""
+        self._address = address
+
+    def setContact(self, contact):
+        """Set the contact details of the venue."""
+        self._contact = contact
+
+    def setMinGuests(self, minGuests):
+        """Set the minimum number of guests allowed at the venue."""
+        self._minGuests = minGuests
+
+    def setMaxGuests(self, maxGuests):
+        """Set the maximum number of guests allowed at the venue."""
+        self._maxGuests = maxGuests
