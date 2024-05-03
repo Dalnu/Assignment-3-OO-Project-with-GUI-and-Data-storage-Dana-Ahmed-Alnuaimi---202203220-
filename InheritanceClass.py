@@ -2,37 +2,44 @@ class Person:
     """Represents a person."""
     def __init__(self, name, address, contactDetails):
         """Initialize a Person object with the given attributes."""
+        # Initialize attributes
         self._name = name
         self._address = address
         self._contactDetails = contactDetails
 
+    # Getter and setter methods for name
     def setName(self, name):
         """Set the name of the person."""
         self._name = name
+
     def getName(self):
         """Return the name of the person."""
         return self._name
 
+    # Getter and setter methods for address
     def setAddress(self, address):
         """Set the address of the person."""
         self._address = address
+
     def getAddress(self):
         """Return the address of the person."""
         return self._address
 
+    # Getter and setter methods for contact details
     def setContactDetails(self, contactDetails):
         """Set the contact details of the person."""
         self._contactDetails = contactDetails
+
     def getContactDetails(self):
         """Return the contact details of the person."""
         return self._contactDetails
-
 
 
 class Employee(Person):
     """Represents an employee of the company."""
     def __init__(self, name, employeeID, department, jobTitle, basicSalary, age, dateOfBirth):
         """Initialize an Employee object with the given attributes."""
+        # Initialize attributes
         self._name = name
         self._employeeID = employeeID
         self._department = department
@@ -42,6 +49,7 @@ class Employee(Person):
         self._dateOfBirth = dateOfBirth
         self.__passportDetails = None
 
+    # Getter and setter methods for each attribute
     def setName(self, name):
         """Set the name of the employee."""
         self._name = name
@@ -103,11 +111,14 @@ class Client(Person):
     """Represents a client of the company."""
     def __init__(self, clientID, name, address, contactDetails, budget):
         """Initialize a Client object with the given attributes."""
+        # Initialize attributes
         self._clientID = clientID
         self._name = name
         self._address = address
         self._contactDetails = contactDetails
         self._budget = budget
+
+    # Getter and setter methods for each attribute
 
     def setClientID(self, clientID):
         """Set the client ID."""
@@ -149,11 +160,14 @@ class Guest(Person):
     """Represents a guest attending an event."""
     def __init__(self, guestID, guestName, guestContact, guestEmail, guestAddress):
         """Initialize a Guest object with the given attributes."""
+        # Initialize attributes
         self._guestID = guestID
         self._guestName = guestName
         self._guestContact = guestContact
         self._guestEmail = guestEmail
         self._guestAddress = guestAddress
+
+    # Getter and setter methods for each attribute
 
     def setGuestID(self, guestID):
         """Set the guest ID."""
@@ -193,13 +207,15 @@ class Guest(Person):
 
 class Supplier(Person):
     """Represents a supplier providing services or goods for events."""
-
     def __init__(self, supplierID, name, address, contactDetails):
         """Initialize a Supplier object with the given attributes."""
+        # Initialize attributes
         self._supplierID = supplierID
         self._name = name
         self._address = address
         self._contactDetails = contactDetails
+
+    # Getter and setter methods for each attribute
 
     def setSupplierID(self, supplierID):
         """Set the supplier ID."""
