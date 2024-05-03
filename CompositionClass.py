@@ -2,6 +2,7 @@ class Event:
     """Represents an event organized by the company."""
     def __init__(self, eventID, type, theme, date, time, duration, venueAddress, clientID, cateringCompany, cleaningCompany, decorationsCompany, entertainmentCompany, furnitureSupplyCompany, invoice):
         """Initialize an Event object with the given attributes."""
+        # Initialize attributes
         self._eventID = eventID
         self._type = type
         self._theme = theme
@@ -19,6 +20,7 @@ class Event:
         self._invoice = invoice
 
     # Getters
+    # Define getter methods for each attribute
     def getEventID(self):
         """Return the ID of the event."""
         return self._eventID
@@ -80,7 +82,8 @@ class Event:
         return self._invoice
 
     # Setters
-    def setEventID(self, eventID):
+    # Define setter methods for each attribute
+        def setEventID(self, eventID):
         """Set the ID of the event."""
         self._eventID = eventID
 
@@ -143,9 +146,10 @@ class Event:
 
 class Venue:
     """Represents a venue where events are hosted."""
-
+    
     def __init__(self, venueID, name, address, contact, minGuests, maxGuests):
         """Initialize a Venue object with the given attributes."""
+        # Initialize attributes
         self._venueID = venueID
         self._name = name
         self._address = address
@@ -154,6 +158,7 @@ class Venue:
         self._maxGuests = maxGuests
 
     # Getters
+    # Define getter methods for each attribute
     def getVenueID(self):
         """Return the venue ID."""
         return self._venueID
@@ -179,7 +184,8 @@ class Venue:
         return self._maxGuests
 
     # Setters
-    def setVenueID(self, venueID):
+    # Define setter methods for each attribute
+        def setVenueID(self, venueID):
         """Set the venue ID."""
         self._venueID = venueID
 
